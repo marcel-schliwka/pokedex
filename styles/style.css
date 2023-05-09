@@ -1,0 +1,498 @@
+/* lateef-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lateef";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lateef-v27-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/lateef-v27-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/lateef-v27-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/lateef-v27-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/lateef-v27-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/lateef-v27-latin-regular.svg#Lateef") format("svg"); /* Legacy iOS */
+}
+/* roboto-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/roboto-v30-latin-300.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto-v30-latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/roboto-v30-latin-300.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/roboto-v30-latin-300.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/roboto-v30-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/roboto-v30-latin-300.svg#Roboto")
+      format("svg"); /* Legacy iOS */
+}
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto-v30-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/roboto-v30-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/roboto-v30-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/roboto-v30-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/roboto-v30-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/roboto-v30-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/roboto-v30-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/roboto-v30-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/roboto-v30-latin-700.svg#Roboto")
+      format("svg"); /* Legacy iOS */
+}
+
+:root {
+  --bg-color-type: linear-gradient(
+    0deg,
+    rgb(114 114 114) 0%,
+    rgba(255, 254, 168, 1) 100%
+  );
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  max-width: 1000px;
+}
+
+body {
+  display: flex;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.gradient {
+  width: 100vw;
+  background: var(--bg-color-type);
+}
+
+/* TITLE SCREEN */
+.title-screen {
+  display: flex;
+  max-width: 1000px;
+  margin-top: -80px;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+}
+
+.title-screen-pokedex {
+  object-fit: cover;
+  transform: scale(0);
+  animation: loadTitleScreenTitle 1s ease-in-out forwards;
+}
+
+.title-poke-imgs {
+  display: flex;
+  margin-top: 100px;
+  position: relative;
+  opacity: 0;
+  animation: loadTitleScreenImgs 1s ease-in-out 1s forwards;
+}
+
+.title-poke-imgs img {
+  object-fit: cover;
+  height: 250px;
+  position: absolute;
+}
+
+.title-poke-imgs img:hover {
+  transform: translateY(-10px);
+  transition: 125ms ease-in-out;
+}
+
+#bulbasaur-title {
+  left: -450px;
+}
+#charmander-title {
+  left: -100px;
+  top: -50px;
+}
+#squirtle-title {
+  left: 250px;
+}
+
+/* HEADER AND SEARCHBAR */
+
+header {
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 25px;
+}
+
+nav {
+  display: flex;
+  padding: 20px 0;
+  margin-right: 20px;
+  justify-content: flex-start;
+}
+
+.search-icon {
+  object-fit: cover;
+  width: 60px;
+  cursor: pointer;
+}
+
+#searchBox {
+  width: 80%;
+  border-radius: 25px;
+  border-style: none;
+  padding: 0 30px;
+  font-size: 1.25rem;
+  transform: scaleX(0);
+}
+
+#magnifier {
+  background-image: url("../assets/loupe.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+.show-search {
+  transition: 215ms ease-in-out;
+  transform: scale(1) !important;
+}
+
+.switch-magnifier {
+  animation: magnifierSwitch 225ms ease-in-out 0s 1 normal forwards;
+}
+
+.close-search {
+  animation: closeSearch 225ms ease-in-out 0s 1 normal forwards;
+}
+
+.hide-search-box {
+  animation: hideSearchBox 125ms ease-in-out 0s 1 normal forwards;
+}
+
+.show-search-box {
+  animation: showSearchBox 125ms ease-in-out 0s 1 normal forwards;
+}
+/*  AUTOCOMPLETE STYLE */
+.autocomplete {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+#suggestions {
+  position: absolute;
+  top: 100%;
+  width: 80%;
+  z-index: 1;
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+#suggestions li {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#suggestions li:hover {
+  background-color: #f2f2f2;
+}
+
+#suggestions li.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* MAIN SECTION */
+
+p {
+  margin: 0;
+  font-family: "Roboto";
+}
+main {
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-section {
+  display: flex;
+  justify-content: center;
+}
+
+.img-background {
+  width: 20vw;
+  height: 20vw;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+#pokeImg {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  object-fit: cover;
+  width: 15vw;
+  transition: 125ms ease-in-out;
+}
+
+#pokeImg:hover {
+  transition: 125ms ease-in-out;
+  transform: translateY(-10px) scale(1.1);
+}
+
+.id-section {
+  margin-top: 15%;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background-color: salmon;
+  font-weight: bold;
+}
+
+.pokeName-section {
+  margin-top: 30px;
+}
+
+#pokeName {
+  font-family: "Lateef", serif;
+  font-size: 4rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: lighter;
+}
+
+/* STATS SECTION */
+#stats-section {
+  margin: 30px 0;
+  text-align: center;
+}
+
+table {
+  text-align: left;
+}
+td {
+  padding-left: 20px;
+}
+
+tr td:first-child {
+  font-weight: bold;
+}
+.stats-heading {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.stats-second-container {
+  display: flex;
+  gap: 20px;
+  text-align: left;
+}
+
+.stats-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 90px; /* Höhe des Footers */
+  background-color: #f0f0f0;
+  display: flex;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon-links {
+  text-decoration: none;
+  color: black;
+}
+
+/* Animations */
+@keyframes magnifierSwitch {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0);
+    background-image: url("../assets/loupe.png");
+  }
+  51% {
+    background-image: url("../assets/close.png");
+  }
+
+  100% {
+    transform: scale(1);
+    background-image: url("../assets/close.png");
+  }
+}
+
+@keyframes closeSearch {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0);
+    background-image: url("../assets/close.png");
+  }
+  51% {
+    background-image: url("../assets/loupe.png");
+  }
+
+  100% {
+    transform: scale(1);
+    background-image: url("../assets/loupe.png");
+  }
+}
+
+@keyframes hideSearchBox {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes showSearchBox {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes loadTitleScreenTitle {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loadTitleScreenImgs {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flyInFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERYS */
+@media screen and (max-width: 670px) {
+  .img-background {
+    height: 200px;
+    width: 200px;
+  }
+  #pokeImg {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .title-poke-imgs img {
+    height: 150px;
+  }
+  #bulbasaur-title {
+    left: -150px;
+    top: 50px;
+  }
+  #charmander-title {
+    left: -30px;
+    top: -100px;
+  }
+  #squirtle-title {
+    left: 50px;
+    top: 50px;
+  }
+}
+
+@media screen and (max-width: 502px) {
+  .title-screen-pokedex {
+    width: 300px;
+  }
+  .title-poke-imgs img {
+    height: 100px;
+  }
+}
